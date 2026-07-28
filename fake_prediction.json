@@ -1,0 +1,578 @@
+[
+{
+  "record_id": "GOLD-LIQ-01",
+  "schema_version": "0.1",
+  "rubric_version": "0.1",
+  "metric_results": [
+    {
+      "metric_id": "policy_compliance",
+      "agent": "claims_accuracy",
+      "metric_name": "POLICY COMPLIANCE",
+      "result": "false",
+      "severity": "critical",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "policy",
+          "text": "The ad makes health performance claims lacking immediate on-screen substantiation.",
+          "timestamp": "00:03"
+        }
+      ],
+      "explanation": "Faux positif LLM : considére que l'absence de disclaimer textuel à l'écran viole les règles publicitaires.",
+      "suggested_correction": "Add mandatory legal disclaimers on screen.",
+      "correction_type": "policy_review"
+    },
+    {
+      "metric_id": "product_truth",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCT TRUTH",
+      "result": "false",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "product_page",
+          "text": "Clinical claims cannot be fully verified from visual inspection alone.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "Désaccord avec le golden label : l'LLM conteste la véracité du produit.",
+      "suggested_correction": "Provide clearer product backing.",
+      "correction_type": "rewrite"
+    },
+    {
+      "metric_id": "channel_readiness",
+      "agent": "claims_accuracy",
+      "metric_name": "CHANNEL READINESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "brief",
+          "text": "Optimized for mobile platforms.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "Format matches channel expectations.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "creative_effectiveness",
+      "agent": "claims_accuracy",
+      "metric_name": "CREATIVE EFFECTIVENESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Clear product usage demonstration.",
+          "timestamp": "00:05"
+        }
+      ],
+      "explanation": "Effective narrative flow.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "audience_fit",
+      "agent": "claims_accuracy",
+      "metric_name": "AUDIENCE FIT",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "low",
+      "evidence": [],
+      "explanation": "Target audience not explicitly defined in metadata.",
+      "suggested_correction": "Define target audience.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "brand_fit",
+      "agent": "claims_accuracy",
+      "metric_name": "BRAND FIT",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Packaging and logo prominent.",
+          "timestamp": "End card"
+        }
+      ],
+      "explanation": "Strong brand alignment.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "brief_adherence",
+      "agent": "claims_accuracy",
+      "metric_name": "BRIEF ADHERENCE",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "medium",
+      "evidence": [],
+      "explanation": "Brief reference missing.",
+      "suggested_correction": "Provide brief.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "product_clarity",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCT CLARITY",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Product packaging visible.",
+          "timestamp": "00:05"
+        }
+      ],
+      "explanation": "Product is clear.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "production_readiness",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCTION READINESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "High quality production.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "No technical issues.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "cta_clarity",
+      "agent": "claims_accuracy",
+      "metric_name": "CTA CLARITY",
+      "result": "false",
+      "severity": "medium",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "End card lacks explicit action verb.",
+          "timestamp": "End"
+        }
+      ],
+      "explanation": "Action step could be clearer.",
+      "suggested_correction": "Add explicit CTA.",
+      "correction_type": "edit_recommendation"
+    }
+  ],
+  "expected": {
+    "ad_readiness_score": 82,
+    "readiness_status": "Needs Revision",
+    "readiness_status_rationale": "Lower score due to compliance and product truth mismatches.",
+    "priority_fix_list": []
+  }
+},
+{
+  "record_id": "GOLD-CC-01",
+  "schema_version": "0.1",
+  "rubric_version": "0.1",
+  "metric_results": [
+    {
+      "metric_id": "policy_compliance",
+      "agent": "claims_accuracy",
+      "metric_name": "POLICY COMPLIANCE",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "policy",
+          "text": "Missing platform compliance policy excerpt.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "Cannot assess compliance fully.",
+      "suggested_correction": "Provide policy rules.",
+      "correction_type": "policy_review"
+    },
+    {
+      "metric_id": "product_truth",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCT TRUTH",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "product_page",
+          "text": "Product features match the Amazon listing.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "Claims are verified against the product page.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "channel_readiness",
+      "agent": "claims_accuracy",
+      "metric_name": "CHANNEL READINESS",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "low",
+      "evidence": [],
+      "explanation": "Format constraints missing.",
+      "suggested_correction": "Provide format specs.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "creative_effectiveness",
+      "agent": "claims_accuracy",
+      "metric_name": "CREATIVE EFFECTIVENESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Clear demonstration of the knee brace.",
+          "timestamp": "00:05"
+        }
+      ],
+      "explanation": "Good narrative flow.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "audience_fit",
+      "agent": "claims_accuracy",
+      "metric_name": "AUDIENCE FIT",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "low",
+      "evidence": [],
+      "explanation": "Target audience not provided.",
+      "suggested_correction": "Define target audience.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "brand_fit",
+      "agent": "claims_accuracy",
+      "metric_name": "BRAND FIT",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Logo present at end card.",
+          "timestamp": "End"
+        }
+      ],
+      "explanation": "Strong branding.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "brief_adherence",
+      "agent": "claims_accuracy",
+      "metric_name": "BRIEF ADHERENCE",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "low",
+      "evidence": [],
+      "explanation": "Brief reference missing.",
+      "suggested_correction": "Provide brief.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "product_clarity",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCT CLARITY",
+      "result": "false",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "The sleeve blends into dark clothing, reducing visibility in early frames.",
+          "timestamp": "00:04"
+        }
+      ],
+      "explanation": "Piège LLM : contredit l'humain en affirmant que le produit manque de contraste visuel.",
+      "suggested_correction": "Enhance product contrast against clothing.",
+      "correction_type": "edit_recommendation"
+    },
+    {
+      "metric_id": "production_readiness",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCTION READINESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Professional video composition.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "No technical issues found.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "cta_clarity",
+      "agent": "claims_accuracy",
+      "metric_name": "CTA CLARITY",
+      "result": "false",
+      "severity": "medium",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "The 'Shop Now' call to action appears too late in the final seconds.",
+          "timestamp": "00:50"
+        }
+      ],
+      "explanation": "Piège LLM : contredit l'évaluation humaine en jugeant le CTA trop tardif.",
+      "suggested_correction": "Move the CTA earlier in the video structure.",
+      "correction_type": "edit_recommendation"
+    }
+  ],
+  "expected": {
+    "ad_readiness_score": 58,
+    "readiness_status": "High Risk",
+    "readiness_status_rationale": "Severe penalties applied due to product clarity and CTA timing failures.",
+    "priority_fix_list": [
+      {
+        "priority": 1,
+        "metric_id": "product_clarity",
+        "issue": "Low product visibility against clothing",
+        "why_it_matters": "Users might miss the core product offering",
+        "recommended_fix": "Adjust lighting or clothing contrast",
+        "owner": "creative"
+      }
+    ]
+  }
+},
+{
+    "record_id": "COPPER-KEW-01",
+    "schema_version": "0.1",
+    "rubric_version": "0.1",
+    "assets": {
+      "brand_id": "kiewpie",
+      "product_page_id": "kewpie-mayonnaise",
+      "brief_id": "bried-kewpie-awareness",
+      "video_id": "KEW-01",
+      "video_type": "obvious_fail",
+      "source": "",
+      "video_ref": "https://youtu.be/qYmoTBDQC_M",
+      "duration_seconds": 30,
+      "notes": "Poor quality example with no product visibility and message clarity failure"
+    },
+    "context": {
+      "campaign_objective": "awareness",
+      "platform": "YouTube",
+      "video_length_seconds": 30,
+      "target_audience": "General Consumers",
+      "brief_ref": "",
+      "product_page_ref": "",
+      "required_cta": "Learn More",
+      "required_messages": [
+        "Product identification and value proposition"
+      ],
+      "approved_claims": [],
+      "forbidden_claims": [],
+      "required_disclaimers": [],
+      "reference_assets": []
+    },
+    "metric_results": [
+      {
+        "metric_id": "policy_compliance",
+        "agent": "claims_accuracy",
+        "metric_name": "POLICY COMPLIANCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "low",
+        "evidence": [
+          {
+            "type": "policy",
+            "text": "No policy excerpt provided.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "Assessment skipped.",
+        "suggested_correction": "Provide policy.",
+        "correction_type": "policy_review"
+      },
+      {
+        "metric_id": "product_truth",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT TRUTH",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "low",
+        "evidence": [],
+        "explanation": "No source.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "channel_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "CHANNEL READINESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "Format is standard.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "PIÈGE 1 : L'humain disait 'false', mais le modèle prédit 'true' (faux positif sur le format).",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "creative_effectiveness",
+        "agent": "claims_accuracy",
+        "metric_name": "CREATIVE EFFECTIVENESS",
+        "result": "true",
+        "severity": "low",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "Creative is engaging.",
+            "timestamp": "00:01"
+          }
+        ],
+        "explanation": "PIÈGE 2 : L'humain l'avait mis à 'false' (high), l'IA le valide à tort à 'true' (low).",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "audience_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "AUDIENCE FIT",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [],
+        "explanation": "Not provided.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brand_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "BRAND FIT",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "Logo present.",
+            "timestamp": "End"
+          }
+        ],
+        "explanation": "PIÈGE 3 : Inversion complète du résultat (attendu 'false' high, prédit 'true').",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brief_adherence",
+        "agent": "claims_accuracy",
+        "metric_name": "BRIEF ADHERENCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [],
+        "explanation": "No brief.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "product_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT CLARITY",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "Product is visible.",
+            "timestamp": "00:05"
+          }
+        ],
+        "explanation": "PIÈGE 4 : L'humain avait mis 'false' (critical) car la mayonnaise n'est pas visible, l'IA hallucine un 'true'.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "production_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCTION READINESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "Playable.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "Conforme.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "cta_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "CTA CLARITY",
+        "result": "true",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "CTA is present.",
+            "timestamp": "End"
+          }
+        ],
+        "explanation": "PIÈGE 5 : Attendu 'false' (high), prédit 'true'.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      }
+    ],
+    "expected": {
+      "ad_readiness_score": 85,
+      "readiness_status": "Ready",
+      "readiness_status_rationale": "PIÈGE GLOBAL : L'IA évalue par erreur le score à 85 ('Ready') au lieu de 30 ('High Risk').",
+      "priority_fix_list": []
+    },
+    "labeling": {
+      "labeler": "Hassan",
+      "date": "2026-07-12",
+      "second_labeler": "",
+      "adjudication_notes": "",
+      "inter_rater_notes": ""
+    }
+  }
+
+
+]

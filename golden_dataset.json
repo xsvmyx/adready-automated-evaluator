@@ -1,0 +1,697 @@
+[
+  {
+    "record_id": "GOLD-LIQ-01",
+    "schema_version": "0.1",
+    "rubric_version": "0.1",
+    "assets": {
+      "brand_id": "liquid-iv",
+      "product_page_id": "liquid-iv-hydration",
+      "brief_id": "",
+      "video_id": "LIQ-01",
+      "video_type": "pass",
+      "source": "",
+      "video_ref": "https://www.youtube.com/watch?v=g6LGzt4-7aE",
+      "duration_seconds": 30,
+      "notes": "Strong example with clear product visibility and research evidence"
+    },
+    "context": {
+      "campaign_objective": "awareness",
+      "platform": "YouTube",
+      "video_length_seconds": 30,
+      "target_audience": "Health onscious adults",
+      "brief_ref": "",
+      "product_page_ref": "https://www.liquid-iv.com/pages/clinical-studies",
+      "required_cta": "Learn More",
+      "required_messages": [
+        "Product hydration benefits",
+        "product usage"
+      ],
+      "approved_claims": [
+        "Hydration support",
+        "clinically studied benefits"
+      ],
+      "forbidden_claims": [],
+      "required_disclaimers": [],
+      "reference_assets": [
+        "Liquid IV Logo",
+        "product packaging"
+      ]
+    },
+    "metric_results": [
+      {
+        "metric_id": "policy_compliance",
+        "agent": "claims_accuracy",
+        "metric_name": "POLICY COMPLIANCE",
+        "result": "false",
+        "severity": "low",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "policy",
+            "text": "The ad makes health-related performance claims. These require substantiation according to FTC and FDA guidelines to ensure they are not misleading",
+            "timestamp": " (0:03-0:06, 0:18-0:23)"
+          }
+        ],
+        "explanation": "The available materials support product claims, but they are insufficient for a complete policy and disclosure review.",
+        "suggested_correction": "Provide the intended platform policy, required disclosures, and final transcript for compliance review.",
+        "correction_type": "policy_review"
+      },
+      {
+        "metric_id": "product_truth",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT TRUTH",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "product_page",
+            "text": "Liquid I.V.'s clinical research page documents clinical trials and research supporting hydration-related product claims.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The supplied product source supports the ad's hydration-focused claims.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "channel_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "CHANNEL READINESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "The video format is well-optimized for mobile-first social platforms (e.g., YouTube Shorts, Instagram Reels).",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "A public YouTube upload alone does not establish whether the creative meets the intended paid placement requirements.",
+        "suggested_correction": "Provide intended placement, aspect ratio, duration limit, and viewing-context requirements.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "creative_effectiveness",
+        "agent": "claims_accuracy",
+        "metric_name": "CREATIVE EFFECTIVENESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The product is clearly visible and shown in use, creating a direct product-centered message.",
+            "timestamp": "0:05-0:07"
+          }
+        ],
+        "explanation": "The creative communicates the product and its use clearly enough to function as a strong high-quality reference.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "audience_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "AUDIENCE FIT",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "The messaging aligns with active consumers looking for functional hydration solutions (e.g., athletes, busy professionals).",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "Audience alignment cannot be reliably judged without knowing the intended audience.",
+        "suggested_correction": "Add the target audience, need state, and intended motivation to the campaign brief.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brand_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "BRAND FIT",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The product packaging is prominent and the end card visibly presents the Liquid I.V. brand logo.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad consistently identifies and reinforces the advertised brand.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brief_adherence",
+        "agent": "claims_accuracy",
+        "metric_name": "BRIEF ADHERENCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "No creative brief, required message list, or campaign objective was supplied with the sample.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad appears coherent, but adherence to an unspecified brief cannot be established.",
+        "suggested_correction": "Provide the campaign objective, required messages, mandatory elements, and required CTA.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "product_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT CLARITY",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "Liquid I.V. product packaging is clearly visible and the product is demonstrated in use.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "A viewer can readily identify the advertised product.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "production_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCTION READINESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The supplied sample is described as complete, professionally produced, and includes a visible branded end card.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "No obvious technical or asset-completeness issue was identified in the supplied review notes.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "cta_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "CTA CLARITY",
+        "result": "false",
+        "severity": "medium",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The supplied notes confirm a branded end card but do not identify a clear action-oriented CTA.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "Brand visibility alone does not provide the viewer with an explicit next step.",
+        "suggested_correction": "Add an action-oriented end-card CTA such as 'Shop Now' or 'Learn More' if required by the campaign.",
+        "correction_type": "edit_recommendation"
+      }
+    ],
+    "expected": {
+      "ad_readiness_score": 94,
+      "readiness_status": "Ready",
+      "readiness_status_rationale": "Product clearly visible,supported claims, strong branding and CTA",
+      "priority_fix_list": []
+    },
+    "labeling": {
+      "labeler": "Hassan",
+      "date": "2026-07-11",
+      "second_labeler": "",
+      "adjudication_notes": "",
+      "inter_rater_notes": ""
+    }
+  },
+  {
+    "record_id": "GOLD-CC-01",
+    "schema_version": "0.1",
+    "rubric_version": "0.1",
+    "assets": {
+      "brand_id": "copper-compression",
+      "product_page_id": "copper-conversion-brace",
+      "brief_id": "",
+      "video_id": "CC-01",
+      "video_type": "pass",
+      "source": "",
+      "video_ref": "https://www.youtube.com/watch?v=mgUBMI2rZco",
+      "duration_seconds": 60,
+      "notes": "Promotes knee sleeve featires and celebrity endorsement"
+    },
+    "context": {
+      "campaign_objective": "sales conversion",
+      "platform": "YouTube",
+      "video_length_seconds": 59,
+      "target_audience": "Older people and athletes",
+      "brief_ref": "",
+      "product_page_ref": "https://www.amazon.com/Copper-Compression-Brace-Small-Medium/dp/B08HR5NDXJ",
+      "required_cta": "Shop Now",
+      "required_messages": [
+        "Copper infused fabric",
+        "moderate compression",
+        "support/stability"
+      ],
+      "approved_claims": [
+        "Independent Clinician Evaluations"
+      ],
+      "forbidden_claims": [],
+      "required_disclaimers": [],
+      "reference_assets": [
+        "Copper Compression logo",
+        "product images"
+      ]
+    },
+    "metric_results": [
+      {
+        "metric_id": "policy_compliance",
+        "agent": "claims_accuracy",
+        "metric_name": "POLICY COMPLIANCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "policy",
+            "text": "No platform policy excerpt, medical-claim policy, required disclaimer list, or full transcript was supplied.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The product listing supports the described product information, but a full compliance assessment requires policy and disclosure inputs.",
+        "suggested_correction": "Provide the intended platform policy, required disclaimers, and final transcript.",
+        "correction_type": "policy_review"
+      },
+      {
+        "metric_id": "product_truth",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT TRUTH",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "product_page",
+            "text": "The on-screen and voiceover content is described as relevant to and supported by the supplied Copper Compression product listing.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The available source material supports the product-related messaging identified in the ad.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "channel_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "CHANNEL READINESS",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "The video format is well-optimized for mobile-first social platforms (e.g., YouTube Shorts, Instagram Reels).",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The creative cannot be conclusively graded for placement readiness without platform and format requirements.",
+        "suggested_correction": "Provide placement, aspect ratio, duration limit, and sound-on or sound-off requirements.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "creative_effectiveness",
+        "agent": "claims_accuracy",
+        "metric_name": "CREATIVE EFFECTIVENESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The product is clearly visible, shown in use, and supported by relevant on-screen text and voiceover.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad presents a coherent product demonstration and understandable message flow.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "audience_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "AUDIENCE FIT",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "No formal target-audience definition or campaign brief was supplied.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The use case appears relevant to potential knee-support customers, but intended-audience fit cannot be validated against a missing brief.",
+        "suggested_correction": "Provide the intended audience, use case, and key motivation.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brand_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "BRAND FIT",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The product remains central to the creative and the ad ends with visible brand presentation.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad clearly connects the product demonstration to the Copper Compression brand.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brief_adherence",
+        "agent": "claims_accuracy",
+        "metric_name": "BRIEF ADHERENCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "No creative brief, mandatory message list, or required campaign objective was supplied.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad is product-focused, but adherence cannot be measured against an unavailable brief.",
+        "suggested_correction": "Provide the campaign objective, required claims, mandatory elements, and required CTA.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "product_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT CLARITY",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The Copper Compression knee sleeve is clearly visible and demonstrated on the body.",
+            "timestamp": " 0:03-0:019, 0:22-0:56"
+          }
+        ],
+        "explanation": "A viewer can readily identify the advertised product and understand its use.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "production_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCTION READINESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The sample is described as complete, with relevant voiceover, on-screen text, product demonstration, end card, and CTA.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "No obvious technical or asset-readiness issue was identified in the supplied notes.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "cta_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "CTA CLARITY",
+        "result": "true",
+        "severity": "none",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The sample includes a visible end card and a clear call to action.",
+            "timestamp": "0:37-0:56"
+          }
+        ],
+        "explanation": "The viewer is given an explicit and appropriate next step.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      }
+    ],
+    "expected": {
+      "ad_readiness_score": 92,
+      "readiness_status": "Ready",
+      "readiness_status_rationale": "Product clearly demonstrated, claims align with listing, clear CTA",
+      "priority_fix_list": []
+    },
+    "labeling": {
+      "labeler": "Hassan",
+      "date": "2026-07-11",
+      "second_labeler": "",
+      "adjudication_notes": "",
+      "inter_rater_notes": ""
+    }
+  },
+  {
+    "record_id": "COPPER-KEW-01",
+    "schema_version": "0.1",
+    "rubric_version": "0.1",
+    "assets": {
+      "brand_id": "kiewpie",
+      "product_page_id": "kewpie-mayonnaise",
+      "brief_id": "bried-kewpie-awareness",
+      "video_id": "KEW-01",
+      "video_type": "obvious_fail",
+      "source": "",
+      "video_ref": "https://youtu.be/qYmoTBDQC_M",
+      "duration_seconds": 30,
+      "notes": "Poor quality example with no product visibility and message clarity failure"
+    },
+    "context": {
+      "campaign_objective": "awareness",
+      "platform": "YouTube",
+      "video_length_seconds": 30,
+      "target_audience": "General Consumers",
+      "brief_ref": "",
+      "product_page_ref": "",
+      "required_cta": "Learn More",
+      "required_messages": [
+        "Product identification and value proposition"
+      ],
+      "approved_claims": [],
+      "forbidden_claims": [],
+      "required_disclaimers": [],
+      "reference_assets": []
+    },
+    "metric_results": [
+      {
+        "metric_id": "policy_compliance",
+        "agent": "claims_accuracy",
+        "metric_name": "POLICY COMPLIANCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "low",
+        "evidence": [
+          {
+            "type": "policy",
+            "text": "No policy excerpt, required disclosure list, product page, or reliable transcript was supplied.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The available notes do not provide enough information for a policy or disclosure assessment.",
+        "suggested_correction": "Provide the intended platform policy, product source materials, disclosures, and verified transcript.",
+        "correction_type": "policy_review"
+      },
+      {
+        "metric_id": "product_truth",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT TRUTH",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "low",
+        "evidence": [
+          {
+            "type": "product_page",
+            "text": "The voiceover is described as poorly translated and irrelevant, and no product-page source was supplied for claim verification.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The claims cannot be reliably identified or checked against authoritative product information.",
+        "suggested_correction": "Provide a verified transcript and product source-of-truth materials.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "channel_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "CHANNEL READINESS",
+        "result": "false",
+        "severity": "medium",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The visuals and voiceover are described as irrelevant to the advertised product, weakening the ad's suitability for a clear consumer placement.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The creative does not communicate effectively in its current viewing context.",
+        "suggested_correction": "Re-edit the ad around relevant product visuals, concise messaging, and platform-appropriate pacing.",
+        "correction_type": "edit_recommendation"
+      },
+      {
+        "metric_id": "creative_effectiveness",
+        "agent": "claims_accuracy",
+        "metric_name": "CREATIVE EFFECTIVENESS",
+        "result": "false",
+        "severity": "high",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The ad uses irrelevant visuals and poorly translated, irrelevant voiceover, leaving the message difficult to follow.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad lacks a coherent product-centered hook and message flow.",
+        "suggested_correction": "Rewrite the voiceover and rebuild the sequence around the product, its use, and one clear value proposition.",
+        "correction_type": "rewrite"
+      },
+      {
+        "metric_id": "audience_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "AUDIENCE FIT",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "No intended target audience or audience need state was supplied.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The creative is unclear, but formal audience fit cannot be determined without a target-audience definition.",
+        "suggested_correction": "Provide the intended audience and desired consumer response.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "brand_fit",
+        "agent": "claims_accuracy",
+        "metric_name": "BRAND FIT",
+        "result": "false",
+        "severity": "high",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The brand logo appears on the end card, but the preceding content does not clearly connect the brand to a mayonnaise product.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad does not establish a coherent relationship between the visuals, product, and brand identity.",
+        "suggested_correction": "Use relevant food and product visuals throughout, and connect the end card to the featured product.",
+        "correction_type": "edit_recommendation"
+      },
+      {
+        "metric_id": "brief_adherence",
+        "agent": "claims_accuracy",
+        "metric_name": "BRIEF ADHERENCE",
+        "result": "cannot_assess",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "brief",
+            "text": "No creative brief, required message, or campaign objective was supplied.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The ad likely fails a basic product-awareness objective, but formal brief adherence cannot be scored without the brief.",
+        "suggested_correction": "Provide the campaign objective, required messages, and mandatory CTA.",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "product_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCT CLARITY",
+        "result": "false",
+        "severity": "critical",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The mayonnaise product is not visible in the video, and the end-card logo does not clarify which product is being advertised.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "A viewer cannot clearly identify the advertised product.",
+        "suggested_correction": "Show the Kewpie mayonnaise bottle prominently and demonstrate it in a relevant food-use scene.",
+        "correction_type": "reshoot_recommendation"
+      },
+      {
+        "metric_id": "production_readiness",
+        "agent": "claims_accuracy",
+        "metric_name": "PRODUCTION READINESS",
+        "result": "true",
+        "severity": "none",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The video is viewable and contains an end card; the identified failures concern creative relevance and clarity rather than file corruption or technical incompleteness.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "No technical launch-blocking defect was identified from the supplied notes.",
+        "suggested_correction": "",
+        "correction_type": "cannot_suggest"
+      },
+      {
+        "metric_id": "cta_clarity",
+        "agent": "claims_accuracy",
+        "metric_name": "CTA CLARITY",
+        "result": "false",
+        "severity": "high",
+        "confidence": "high",
+        "evidence": [
+          {
+            "type": "visual",
+            "text": "The end card shows the brand logo but provides no clear action or next step for the viewer.",
+            "timestamp": ""
+          }
+        ],
+        "explanation": "The viewer is not told what to do after or while watching the ad",
+        "suggested_correction": "Add a clear, campaign-appropriate CTA such as 'Try Kewpie Mayonnaise' or 'Shop Now' or something relevant",
+        "correction_type": "edit_recommendation"
+      }
+    ],
+    "expected": {
+      "ad_readiness_score": 30,
+      "readiness_status": "High Risk",
+      "readiness_status_rationale": "Product is not visible in video, irrelevant voiceover and visuals",
+      "priority_fix_list": []
+    },
+    "labeling": {
+      "labeler": "Hassan",
+      "date": "2026-07-12",
+      "second_labeler": "",
+      "adjudication_notes": "",
+      "inter_rater_notes": ""
+    }
+  }
+]

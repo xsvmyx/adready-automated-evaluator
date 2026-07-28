@@ -1,0 +1,181 @@
+[{
+  "record_id": "GOLD-LIQ-01",
+  "schema_version": "0.1",
+  "rubric_version": "0.1",
+  "metric_results": [
+    {
+      "metric_id": "policy_compliance",
+      "agent": "claims_accuracy",
+      "metric_name": "POLICY COMPLIANCE",
+      "result": "false",
+      "severity": "critical",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "policy",
+          "text": "The ad makes health performance claims lacking immediate on-screen substantiation.",
+          "timestamp": "00:03"
+        }
+      ],
+      "explanation": "Faux positif LLM : considére que l'absence de disclaimer textuel à l'écran viole les règles publicitaires.",
+      "suggested_correction": "Add mandatory legal disclaimers on screen.",
+      "correction_type": "policy_review"
+    },
+    {
+      "metric_id": "product_truth",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCT TRUTH",
+      "result": "false",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "product_page",
+          "text": "Clinical claims cannot be fully verified from visual inspection alone.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "Désaccord avec le golden label : l'LLM conteste la véracité du produit.",
+      "suggested_correction": "Provide clearer product backing.",
+      "correction_type": "rewrite"
+    },
+    {
+      "metric_id": "channel_readiness",
+      "agent": "claims_accuracy",
+      "metric_name": "CHANNEL READINESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "brief",
+          "text": "Optimized for mobile platforms.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "Format matches channel expectations.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "creative_effectiveness",
+      "agent": "claims_accuracy",
+      "metric_name": "CREATIVE EFFECTIVENESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Clear product usage demonstration.",
+          "timestamp": "00:05"
+        }
+      ],
+      "explanation": "Effective narrative flow.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "audience_fit",
+      "agent": "claims_accuracy",
+      "metric_name": "AUDIENCE FIT",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "low",
+      "evidence": [],
+      "explanation": "Target audience not explicitly defined in metadata.",
+      "suggested_correction": "Define target audience.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "brand_fit",
+      "agent": "claims_accuracy",
+      "metric_name": "BRAND FIT",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Packaging and logo prominent.",
+          "timestamp": "End card"
+        }
+      ],
+      "explanation": "Strong brand alignment.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "brief_adherence",
+      "agent": "claims_accuracy",
+      "metric_name": "BRIEF ADHERENCE",
+      "result": "cannot_assess",
+      "severity": "none",
+      "confidence": "medium",
+      "evidence": [],
+      "explanation": "Brief reference missing.",
+      "suggested_correction": "Provide brief.",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "product_clarity",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCT CLARITY",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "Product packaging visible.",
+          "timestamp": "00:05"
+        }
+      ],
+      "explanation": "Product is clear.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "production_readiness",
+      "agent": "claims_accuracy",
+      "metric_name": "PRODUCTION READINESS",
+      "result": "true",
+      "severity": "none",
+      "confidence": "high",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "High quality production.",
+          "timestamp": ""
+        }
+      ],
+      "explanation": "No technical issues.",
+      "suggested_correction": "",
+      "correction_type": "cannot_suggest"
+    },
+    {
+      "metric_id": "cta_clarity",
+      "agent": "claims_accuracy",
+      "metric_name": "CTA CLARITY",
+      "result": "false",
+      "severity": "medium",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "type": "visual",
+          "text": "End card lacks explicit action verb.",
+          "timestamp": "End"
+        }
+      ],
+      "explanation": "Action step could be clearer.",
+      "suggested_correction": "Add explicit CTA.",
+      "correction_type": "edit_recommendation"
+    }
+  ],
+  "expected": {
+    "ad_readiness_score": 82,
+    "readiness_status": "Needs Revision",
+    "readiness_status_rationale": "Lower score due to compliance and product truth mismatches.",
+    "priority_fix_list": []
+  }
+}]
