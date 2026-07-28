@@ -143,7 +143,6 @@ export async function compareSemanticSimilarity(
   goldenText: string, 
   predictionText: string
 ): Promise<number> {
-  // Support natif Deno + Node.js
   const apiKey = typeof Deno !== "undefined" 
     ? Deno.env.get("OPENROUTER_API_KEY") 
     : process.env.OPENROUTER_API_KEY;
@@ -175,7 +174,7 @@ Respond ONLY with a single numeric float between 0.0 and 1.0 representing semant
         "X-Title": "AdReady Evaluator"
       },
       body: JSON.stringify({
-        model: "openai/gpt-4o-mini", // Modèle très rapide, pas cher et fiable pour la qualification
+        model: "google/gemini-3-flash-preview",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.0
       })
@@ -183,32 +182,20 @@ Respond ONLY with a single numeric float between 0.0 and 1.0 representing semant
 
     const data = await response.json();
 
-    // Gestion explicite des erreurs envoyées par l'API OpenRouter
     if (!response.ok || data.error) {
       console.error("❌ Erreur OpenRouter API:", data.error?.message || response.statusText);
       return 0.0;
     }
 
-    if (!data.choices || data.choices.length === 0) {
-      console.error("❌ OpenRouter n'a renvoyé aucun choix :", data);
-      return 0.0;
-    }
-
-    const content = data.choices[0].message?.content?.trim() || "";
-    
-    // Extraction sécurisée du nombre flottant (ex: extrait "0.85" même si la réponse est "Score: 0.85")
+    const content = data.choices?.[0]?.message?.content?.trim() || "";
     const match = content.match(/0(\.\d+)?|1(\.0+)?/);
-    if (match) {
-      return parseFloat(match[0]);
-    }
+    return match ? parseFloat(match[0]) : 0.0;
 
-    return 0.0;
   } catch (error) {
     console.error("❌ Erreur réseau lors de l'appel à OpenRouter :", error);
     return 0.0;
   }
 }
-
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -244,12 +231,15 @@ export interface EvaluationReport {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 export async function evaluateDatasets(
   goldenDataset: DatasetRecord[], 
   predictionDataset: DatasetRecord[]
 ): Promise<EvaluationReport> {
   
-  // Initialisation des compteurs globaux
+  
   const metricStats: Record<string, MetricStats> = {};
   const columnDisagreements: Record<string, number> = {};
   
@@ -260,14 +250,7 @@ export async function evaluateDatasets(
   let totalScoresEvaluated = 0;
   let exactScoresCount = 0;
 
-  // Comparateur textuel temporaire sans LLM (1.0 si identique, 0.0 sinon)
-  const compareTextFallback = (a: string, b: string): number => {
-    if (!a && !b) return 1.0;
-    if (!a || !b) return 0.0;
-    return compareExactMatch(a, b) ? 1.0 : 0.0;
-  };
-
-  // Fonction utilitaire pour consigner un désaccord
+   
   const logDisagreement = (columnName: string) => {
     columnDisagreements[columnName] = (columnDisagreements[columnName] || 0) + 1;
     totalDisagreements++;
@@ -276,11 +259,10 @@ export async function evaluateDatasets(
   for (const golden of goldenDataset) {
     const prediction = predictionDataset.find(p => p.record_id === golden.record_id);
     
-    // Si l'enregistrement n'existe pas dans la prédiction, on l'ignore
+     
     if (!prediction) continue;
 
-    // --- 1. Comparaison des champs globaux (Expected) ---
-    // Comparaison Numérique : ad_readiness_score (avec tolérance de 2 points)
+
     if (!compareNumeric(golden.expected.ad_readiness_score, prediction.expected.ad_readiness_score, 2)) {
       logDisagreement('expected.ad_readiness_score');
     } else {
@@ -288,8 +270,8 @@ export async function evaluateDatasets(
     }
     totalScoresEvaluated++;
 
-    // Comparaison Texte (Remplacement LLM temporaire) : readiness_status_rationale
-    const rationaleSim = compareTextFallback(
+
+    const rationaleSim = await compareSemanticSimilarity(
       golden.expected.readiness_status_rationale, 
       prediction.expected.readiness_status_rationale
     );
@@ -298,7 +280,7 @@ export async function evaluateDatasets(
 
     if (rationaleSim < 0.7) logDisagreement('expected.readiness_status_rationale');
 
-    // Comparaison de Liste : priority_fix_list
+
     const fixListMatch = compareMultiValueLists(
       golden.expected.priority_fix_list, 
       prediction.expected.priority_fix_list
@@ -306,7 +288,6 @@ export async function evaluateDatasets(
     if (!fixListMatch.isExact) logDisagreement('expected.priority_fix_list');
 
 
-    // --- 2. Comparaison des Métriques Individuelles ---
     for (const goldMetric of golden.metric_results) {
       const predMetric = prediction.metric_results.find(m => m.metric_id === goldMetric.metric_id);
       
@@ -332,8 +313,6 @@ export async function evaluateDatasets(
       } else if (goldMetric.result === "true" && predMetric.result === "false") {
         stats.falseNegatives++;
       } else if (goldMetric.result !== predMetric.result) {
-        // Un désaccord n'est consigné que s'il y a une divergence réelle
-        // (évite de comptabiliser un désaccord quand les deux sont "cannot_assess")
         logDisagreement(`metric.${mId}.result`);
       }
 
@@ -342,13 +321,13 @@ export async function evaluateDatasets(
       if (!compareExactMatch(goldMetric.confidence, predMetric.confidence)) logDisagreement(`metric.${mId}.confidence`);
       if (!compareExactMatch(goldMetric.correction_type, predMetric.correction_type)) logDisagreement(`metric.${mId}.correction_type`);
 
-      // C. Texte libre (Remplacement LLM temporaire) : explanation & suggested_correction
-      const expSim = compareTextFallback(goldMetric.explanation, predMetric.explanation);
+      // C. Sémantique via LLM : explanation & suggested_correction
+      const expSim = await compareSemanticSimilarity(goldMetric.explanation, predMetric.explanation);
       totalSemanticScore += expSim;
       semanticComparisonsCount++;
       if (expSim < 0.7) logDisagreement(`metric.${mId}.explanation`);
 
-      const corrSim = compareTextFallback(goldMetric.suggested_correction, predMetric.suggested_correction);
+      const corrSim = await compareSemanticSimilarity(goldMetric.suggested_correction, predMetric.suggested_correction);
       totalSemanticScore += corrSim;
       semanticComparisonsCount++;
       if (corrSim < 0.7) logDisagreement(`metric.${mId}.suggested_correction`);
@@ -399,6 +378,7 @@ export async function evaluateDatasets(
 
 
 
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////
@@ -411,7 +391,7 @@ const goldenDataset: DatasetRecord[] = JSON.parse(
 );
 
 const predictionDataset: DatasetRecord[] = JSON.parse(
-  readFileSync('./notgold.json', 'utf-8')
+  readFileSync('./fake.json', 'utf-8')
 );
 
 // 2. Exécution de l'évaluation

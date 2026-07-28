@@ -1,9 +1,94 @@
 {
-  "overallSemanticSimilarity": 1,
-  "totalDisagreements": 0,
-  "highestDisagreementRate": "none",
-  "worstPerformingColumns": [],
-  "overallScoreAccuracy": 1,
+  "overallSemanticSimilarity": 0.5714285714285714,
+  "totalDisagreements": 21,
+  "highestDisagreementRate": "expected.ad_readiness_score",
+  "worstPerformingColumns": [
+    {
+      "column": "expected.ad_readiness_score",
+      "disagreements": 1
+    },
+    {
+      "column": "expected.readiness_status_rationale",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.policy_compliance.severity",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.policy_compliance.confidence",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.policy_compliance.explanation",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.policy_compliance.suggested_correction",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.policy_compliance.evidence_timestamp",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.product_truth.severity",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.product_truth.confidence",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.product_truth.correction_type",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.product_truth.explanation",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.product_truth.suggested_correction",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.channel_readiness.confidence",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.channel_readiness.explanation",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.channel_readiness.suggested_correction",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.creative_effectiveness.explanation",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.creative_effectiveness.evidence_timestamp",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.audience_fit.confidence",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.audience_fit.explanation",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.audience_fit.suggested_correction",
+      "disagreements": 1
+    },
+    {
+      "column": "metric.product_clarity.evidence_timestamp",
+      "disagreements": 1
+    }
+  ],
+  "overallScoreAccuracy": 0,
   "metrics": {
     "policy_compliance": {
       "truePositives": 0,
@@ -16,14 +101,14 @@
       "f1": 0
     },
     "product_truth": {
-      "truePositives": 1,
+      "truePositives": 0,
       "trueNegatives": 0,
       "falsePositives": 0,
-      "falseNegatives": 0,
-      "accuracy": 1,
-      "precision": 1,
-      "recall": 1,
-      "f1": 1
+      "falseNegatives": 1,
+      "accuracy": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
     },
     "channel_readiness": {
       "truePositives": 1,

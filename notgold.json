@@ -12,7 +12,7 @@
       "source": "",
       "video_ref": "https://www.youtube.com/watch?v=g6LGzt4-7aE",
       "duration_seconds": 30,
-      "notes": "Strong example with clear product visibility and research evidence"
+      "notes": "Strong example with clear product visibility and research f"
     },
     "context": {
       "campaign_objective": "awareness",
@@ -88,7 +88,7 @@
             "timestamp": ""
           }
         ],
-        "explanation": "A public YouTube upload alone does not establish whether the creative meets the intended paid placement requirements.",
+        "explanation": "A YouTube video alone is not enough.",
         "suggested_correction": "Provide intended placement, aspect ratio, duration limit, and viewing-context requirements.",
         "correction_type": "cannot_suggest"
       },
