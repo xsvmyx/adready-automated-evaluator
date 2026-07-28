@@ -7,25 +7,48 @@ const ID_MAPPING: Record<string, string> = {
 };
 
 function parseCSV(text: string): Record<string, string>[] {
-  const lines = text.trim().split("\n");
+  const lines = text.split("\n");
   if (lines.length === 0) return [];
-  
-  const headers = lines[0].split(",").map(h => h.trim());
+
+  const headers = parseCSVLine(lines[0]);
   const rows: Record<string, string>[] = [];
 
   for (let i = 1; i < lines.length; i++) {
-    const currentLine = lines[i];
-    if (!currentLine.trim()) continue;
+    const line = lines[i].trim();
+    if (!line) continue;
 
-    const values = currentLine.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(v => v.trim().replace(/^"|"$/g, ""));
+    const values = parseCSVLine(line);
+    if (values.length === 0 || (values.length === 1 && values[0] === "")) continue;
+
     const row: Record<string, string> = {};
     headers.forEach((header, index) => {
-      row[header] = values[index] || "";
+      row[header] = values[index] !== undefined ? values[index].trim() : "";
     });
     rows.push(row);
   }
 
   return rows;
+}
+
+// Fonction utilitaire pour découper proprement les lignes CSV avec gestion des guillemets
+function parseCSVLine(text: string): string[] {
+  const result: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      result.push(current.replace(/^"|"$/g, "").trim());
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+  result.push(current.replace(/^"|"$/g, "").trim());
+  return result;
 }
 
 // Helper pour découper les listes (gère les séparateurs par virgule ou point-virgule si présents)
@@ -51,7 +74,7 @@ async function main() {
       metric_id: m.metric_id,
       agent: "claims_accuracy",
       metric_name: m.metric_id.replace(/_/g, " ").toUpperCase(),
-      result: m.result.toLowerCase(),
+      result: (m.result || "").toLowerCase(),
       severity: m.severity || "none",
       confidence: m.confidence || "medium",
       evidence: m.evidence_text ? [{ type: m.evidence_type || "visual", text: m.evidence_text, timestamp: m.evidence_timestamp || "" }] : [],

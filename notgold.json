@@ -1,5 +1,5 @@
 [
-      {
+  {
     "record_id": "GOLD-LIQ-01",
     "schema_version": "0.1",
     "rubric_version": "0.1",
@@ -12,13 +12,13 @@
       "source": "",
       "video_ref": "https://www.youtube.com/watch?v=g6LGzt4-7aE",
       "duration_seconds": 30,
-      "notes": "Strong example with clear product visibility and research f"
+      "notes": "Strong example with clear product visibility and research evidence"
     },
     "context": {
       "campaign_objective": "awareness",
       "platform": "YouTube",
       "video_length_seconds": 30,
-      "target_audience": "Health onscious adults",
+      "target_audience": "Health conscious adults",
       "brief_ref": "",
       "product_page_ref": "https://www.liquid-iv.com/pages/clinical-studies",
       "required_cta": "Learn More",
@@ -49,7 +49,7 @@
           {
             "type": "policy",
             "text": "The ad makes health-related performance claims. These require substantiation according to FTC and FDA guidelines to ensure they are not misleading",
-            "timestamp": " (0:03-0:06, 0:18-0:23)"
+            "timestamp": "(0:03-0:06, 0:18-0:23)"
           }
         ],
         "explanation": "The available materials support product claims, but they are insufficient for a complete policy and disclosure review.",
@@ -88,7 +88,7 @@
             "timestamp": ""
           }
         ],
-        "explanation": "A YouTube video alone is not enough.",
+        "explanation": "A public YouTube upload alone does not establish whether the creative meets the intended paid placement requirements.",
         "suggested_correction": "Provide intended placement, aspect ratio, duration limit, and viewing-context requirements.",
         "correction_type": "cannot_suggest"
       },
@@ -210,7 +210,7 @@
         "evidence": [
           {
             "type": "visual",
-            "text": "The supplied notes confirm a branded end card but do not identify a clear action-oriented CTA.",
+            "text": "The supplied notes indicate a branded end card is present but do not identify a clear CTA that drives action.",
             "timestamp": ""
           }
         ],
